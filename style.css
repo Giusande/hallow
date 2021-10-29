@@ -1,0 +1,457 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #FF7F00;
+  overflow-x: hidden;
+}
+nav{
+  background-color: #FF7F00;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav .logozin{
+  display: flex;
+  align-items: center;
+}
+
+nav .logozin img{
+  width: 80px;
+}
+
+.x{
+  display: none;
+}
+
+nav .logozin a{
+  font-size: 40px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: arial;
+  color: #fff;
+}
+
+nav ul li{
+  float: left;
+  list-style: none;
+  margin-left: 15px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-family: arial;
+  color: #fff;
+  position: relative;
+}
+
+nav .navegacao img{
+  display: none;
+}
+
+.hallow{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  float: left;
+}
+
+.hallow img {
+  border-radius: 1000px;
+  width: 500px;
+  position: absolute;
+  left: 20px;
+}
+
+.hallow h1{
+    position: relative;
+    left: 500px;
+    top: 100px;
+    font-size: 60px;
+    font-family: arial;
+    color: #fff;
+  }
+  
+  .hallow p{
+    position: relative;
+    top: 120px;
+    left: 520px;
+    font-size: 26px;
+    width: 600px;
+    color: #fff;
+    font-family: arial;
+  }
+  
+  .hallow .saiba-mais{
+    position: relative;
+    left: 520px;
+    top: 200px;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 24px;
+    font-family: arial;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    animation-name: saibamais;
+    animation-duration: 1.5s;
+  }
+  
+  .hallow .saiba-mais:hover{
+    background: #fff;
+    color: #ffb066;
+    border: none;
+    transform: scale(1.2);
+    transition-duration
+    : 0.5s;
+  }
+
+.hallow .fechar{
+    position: relative;
+    left: 520px;
+    top: 200px;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 24px;
+    font-family: arial;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    display: none;
+    animation-name: saibamais;
+    animation-duration: 1.5s;
+  }
+  
+  .hallow .fechar:hover{
+    background: #fff;
+    color: #ffb066;
+    border: none;
+    transform: scale(1.2);
+     transition-duration
+    : 0.5s;
+  }
+
+.lista-item {
+	background: white;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 10px;
+	box-shadow: 0 2px 6px rgba(50,50,90,.1);
+  position: relative;
+  top: 520px;
+  width: 90%;
+  left: 5%;
+  animation-name: saibamais;
+  animation-duration: 1s;
+  display: none;
+}
+
+.faq-titulo {
+	cursor: pointer;
+	padding: 10px;
+	font-size: 1.4em;
+	font-family: monospace;
+	color: orange;
+  font-size: 30px;
+}
+
+.faq-titulo::after {
+	content: '+';
+	float: right;
+	transition: transform .3s ease;
+}
+
+.faq-conteudo {
+	padding: 10px;
+	color: #6B7C93;
+	font-family: Helvetica;
+	font-size: 15px;
+	line-height: 1.4em;
+	display: none;
+  animation-name: saibamais;
+  animation-duration: 1s;
+}
+
+.trigger-input {
+	display: none;
+}
+
+.trigger-input:checked + .trigger-wrapper .faq-conteudo {
+	display: block;
+}
+
+.trigger-input:checked + .trigger-wrapper .faq-titulo::after {
+	transform: rotate(45deg) scale(1.1);
+}
+
+@keyframes saibamais{
+  0%{
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 1;
+  }
+
+}
+
+@media (max-width:999px){
+  
+  body{
+    overflow-x: hidden;
+  }
+  
+  nav{
+    height: 150px;
+  }
+  
+  nav .logozin img{
+    width: 120px;
+  }
+  
+  nav .logozin a{
+    font-size: 70px;
+  }
+  
+  
+  #btn-responsive{
+    border-top: 4px solid;
+    width: 40px;
+    display: block;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    color: #fff;
+  }
+  #btn-responsive::after, #btn-responsive::before{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: currentcolor;
+    margin-top: 10px;
+  }
+  
+  .x{
+    font-size: 50px;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    font-family: arial;
+    cursor: pointer;
+    display: block;
+    color: #fff;
+  }
+ 
+  nav .navegacao img{
+  display: block;
+  width: 200px;
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+  
+  .navegacao{
+    background-color: #f57a00;
+    position: absolute;
+    /*top: -363px;*/
+    top: -10px;
+    left: 1%;
+    width: 98%;
+    height: 300px;
+    border-radius: 2px 2px 24px 24px;
+    animation-name: tran;
+    animation-duration: 1s;
+    display: none;
+    border: 1px solid #fff;
+    z-index: 1000;
+  }
+  
+  .navegacao ul li{
+    float: none;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    left: -8px;
+    top: -40px;
+  }
+  
+  .navegacao ul li a{
+    font-size: 26px;  
+  }
+  .navegacao ul li a:hover{
+    color: #fff;
+    border-radius: 2px;
+    transition-duration: 0.5s;
+  }
+  
+  .hallow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 20px;
+    top: 200px;
+    float: flex;
+  }
+
+  .hallow img {
+    border-radius: 1000px;
+    width: 500px;
+    position: absolute;
+    left: 0%;
+  }
+  
+  .hallow h1{
+    position: absolute;
+    left: 500px;
+    top: 100px;
+    font-size: 40px;
+    font-family: arial;
+    color: #fff;
+  }
+  
+  .hallow p{
+    position: relative;
+    top: 160px;
+    left: 520px;
+    font-size: 20px;
+    width: 400px;
+  }
+  
+  .hallow .saiba-mais{
+    position: relative;
+    left: 520px;
+    top: 250px;
+    width: 170px;
+    height: 50px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 24px;
+    font-family: arial;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .hallow .saiba-mais:hover{
+    background: #fff;
+    color: #ffb066;
+    border: none;
+    transform: scale(1.1);
+  }
+  
+  .hallow .fechar{
+    position: relative;
+    left: 520px;
+    top: 250px;
+    width: 170px;
+    height: 50px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 24px;
+    font-family: arial;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    display: none;
+    animation-name: saibamais;
+    animation-duration: 1.5s;
+  }
+  
+  .hallow .fechar:hover{
+    background: #fff;
+    color: #ffb066;
+    border: none;
+    transform: scale(1.1);
+  }
+  
+  .lista-item {
+	background: white;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 10px;
+	box-shadow: 0 2px 6px rgba(50,50,90,.1);
+  position: relative;
+  top: 600px;
+  width: 90%;
+  left: 5%;
+  animation-name: saibamais;
+  animation-duration: 1s;
+  display: none;
+}
+  
+  .faq-conteudo {
+	padding: 10px;
+	color: #6B7C93;
+	font-family: Helvetica;
+	font-size: 10px;
+	line-height: 1.4em;
+	display: none;
+  animation-name: saibamais;
+  animation-duration: 1s;
+}
+  
+}
+
+@keyframes tran{
+  0%{
+    position: absolute;
+    top: -343px;
+  }
+  
+  100%{
+    position: absolute;
+    top: -10px;
+  }
+}
+
+.perguntas{
+  position: relative;
+  top: 650px;
+}
+
+.perguntas h1{
+  text-align: center;
+  font-size: 40px;
+  font-family: arial;
+  color: white;
+}
+
+.perguntas h2{
+  text-align: center;
+  font-family: arial;
+  margin: 20px;
+  margin-top: 50px;
+  color: white;
+  font-size: 30px;
+}
+
+.perguntas p{
+  font-family: 20px;
+  width: 90%;
+  margin-left: 5%;
+  color: white;
+  font-size: 20px;
+}
+
+.perguntas h3{
+  font-family: arial;
+  text-align: center;
+  margin: 10px;
+  color: #fff;
+  font-size: 25px;
+}
