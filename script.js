@@ -20,5 +20,5 @@ sair.addEventListener("click", function(){
 })
 
   function saibamais(){
-    window.location.href = 'https://cdpn.io/thicode/debug/abpVEeB/jVMpoEDNzPxk'
+    window.location.href = 'https://giusande.github.io/halloween/'
 }
